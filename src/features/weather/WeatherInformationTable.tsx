@@ -24,31 +24,21 @@ export default function WeatherInformationTable() {
             isStriped
           >
             <TableHeader>
-              <TableColumn className="text-lg">{weather.name}</TableColumn>
-              <TableColumn> </TableColumn>
-              <TableColumn className="hidden md:table-cell"> </TableColumn>
-              <TableColumn className="hidden md:table-cell"> </TableColumn>
-              <TableColumn className="hidden md:table-cell"> </TableColumn>
-              <TableColumn className="hidden md:table-cell"> </TableColumn>
+              <TableColumn>Date(mm/dd/yyy)</TableColumn>
+              <TableColumn>Temp(F) </TableColumn>
+              <TableColumn className="hidden md:table-cell">
+                Description
+              </TableColumn>
+              <TableColumn className="hidden md:table-cell"> Main </TableColumn>
+              <TableColumn className="hidden md:table-cell">
+                Pressure
+              </TableColumn>
+              <TableColumn className="hidden md:table-cell">
+                Humidity
+              </TableColumn>
             </TableHeader>
             <TableBody>
               <TableRow key="1">
-                <TableCell className="font-semibold">(mm/dd/yyyy)</TableCell>
-                <TableCell className="font-semibold">Temp(F)</TableCell>
-                <TableCell className="hidden font-semibold md:table-cell">
-                  Description
-                </TableCell>
-                <TableCell className="hidden font-semibold md:table-cell">
-                  Main
-                </TableCell>
-                <TableCell className="hidden font-semibold md:table-cell">
-                  Pressure
-                </TableCell>
-                <TableCell className="hidden font-semibold md:table-cell">
-                  Humidity
-                </TableCell>
-              </TableRow>
-              <TableRow key="2">
                 <TableCell>
                   {new Date(weather.dt * 1000).toLocaleDateString('en-US', {
                     month: '2-digit',
