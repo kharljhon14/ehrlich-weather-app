@@ -41,7 +41,7 @@ export interface Weather {
   cod: number;
 }
 
-export interface Weather404 {
+export interface WeatherError {
   status: number;
   message: string;
 }

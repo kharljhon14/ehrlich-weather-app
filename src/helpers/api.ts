@@ -1,8 +1,8 @@
-import type { Weather, Weather404 } from '@/types/weather';
+import type { Weather, WeatherError } from '@/types/weather';
 
 export async function getWeatherByCity(
   city: string,
-): Promise<Weather | Weather404> {
+): Promise<Weather | WeatherError> {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_OPEN_WEATHER_API_URL}q=${city}&appid=${process.env.NEXT_PUBLIC_OPEN_WEATHER_KEY}&units=imperial`,
   );
