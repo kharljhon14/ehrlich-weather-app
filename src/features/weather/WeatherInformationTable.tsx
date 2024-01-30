@@ -24,12 +24,14 @@ export default function WeatherInformationTable() {
             isStriped
           >
             <TableHeader>
-              <TableColumn>Date(mm/dd/yyy)</TableColumn>
+              <TableColumn>
+                <span className="block">Date</span>(mm/dd/yyy)
+              </TableColumn>
               <TableColumn>Temp(F) </TableColumn>
               <TableColumn className="hidden md:table-cell">
                 Description
               </TableColumn>
-              <TableColumn className="hidden md:table-cell"> Main </TableColumn>
+              <TableColumn className="hidden md:table-cell">Main</TableColumn>
               <TableColumn className="hidden md:table-cell">
                 Pressure
               </TableColumn>
