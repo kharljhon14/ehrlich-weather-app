@@ -8,12 +8,10 @@ export async function getWeatherByCity(
   );
 
   if (!res.ok) {
-    const { cod, message } = (await res.json()) as WeatherError;
-    return {
-      cod,
-      message,
-    };
+    const json = (await res.json()) as WeatherError;
+    return json;
   }
+
   const json = (await res.json()) as Weather;
 
   return json;
