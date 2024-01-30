@@ -13,9 +13,6 @@ const handler = NextAuth({
       clientSecret: GITHUB_CLIENT_SECRET,
     }),
   ],
-  pages: {
-    signIn: '/',
-  },
 });
 
 export { handler as GET, handler as POST };

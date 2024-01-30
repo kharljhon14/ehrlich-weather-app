@@ -1,9 +1,9 @@
-import LoginScreen from '@/features/auth/LoginScreen';
+import Container from '@/features/home/Container';
 
 export default function Home() {
   return (
     <main>
-      <LoginScreen />
+      <Container />
     </main>
   );
 }
