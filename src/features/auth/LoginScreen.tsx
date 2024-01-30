@@ -1,4 +1,7 @@
+'use client';
+
 import { Button } from '@nextui-org/react';
+import { signIn } from 'next-auth/react';
 
 export default function LoginScreen() {
   return (
@@ -9,7 +12,14 @@ export default function LoginScreen() {
           your Github user to use the application and view the weather in your
           city.
         </p>
-        <Button color="primary">Login</Button>
+
+        <Button
+          type="submit"
+          color="primary"
+          onClick={() => signIn('github')}
+        >
+          Login
+        </Button>
       </div>
     </div>
   );

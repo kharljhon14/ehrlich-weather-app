@@ -1,7 +1,16 @@
-import { Navbar, NavbarBrand } from '@nextui-org/react';
+import {
+  Button,
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+} from '@nextui-org/react';
+import { signOut, useSession } from 'next-auth/react';
 import { FaCloud } from 'react-icons/fa';
 
 export default function Header() {
+  const session = useSession();
+
   return (
     <Navbar
       maxWidth="full"
@@ -9,21 +18,24 @@ export default function Header() {
     >
       <NavbarBrand>
         <FaCloud size={48} />
-        <p className="ml-2 text-lg font-bold">Weather Forecast</p>
+        {!session.data?.user && (
+          <p className="ml-2 text-lg font-bold">Weather Forecast</p>
+        )}
       </NavbarBrand>
 
-      {/* <NavbarContent justify="end">
-        <NavbarItem>
-          <Button
-            as={Link}
-            color="primary"
-            href="#"
-            variant="flat"
-          >
-            Log Out
-          </Button>
-        </NavbarItem>
-      </NavbarContent> */}
+      {session.data?.user && (
+        <NavbarContent justify="end">
+          <NavbarItem>
+            <Button
+              color="primary"
+              variant="solid"
+              onClick={() => signOut()}
+            >
+              Log Out
+            </Button>
+          </NavbarItem>
+        </NavbarContent>
+      )}
     </Navbar>
   );
 }
