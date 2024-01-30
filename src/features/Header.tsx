@@ -18,9 +18,8 @@ export default function Header() {
     >
       <NavbarBrand>
         <FaCloud size={48} />
-        {!session.data?.user && (
-          <p className="ml-2 text-lg font-bold">Weather Forecast</p>
-        )}
+
+        <p className="ml-2 text-lg font-bold">Weather Forecast</p>
       </NavbarBrand>
 
       {session.data?.user && (

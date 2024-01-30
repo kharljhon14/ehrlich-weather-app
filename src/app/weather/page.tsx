@@ -1,7 +1,11 @@
+import UserInfo from '@/features/auth/UserInfo';
+import WeatherForm from '@/features/weather/WeatherForm';
+
 export default function WeatherPage() {
   return (
-    <div>
-      <h1>Weather</h1>
-    </div>
+    <main className="flex flex-col items-center justify-center space-y-6">
+      <UserInfo />
+      <WeatherForm />
+    </main>
   );
 }

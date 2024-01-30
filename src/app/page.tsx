@@ -1,9 +1,9 @@
-import Container from '@/features/home/Container';
+import LoginScreen from '@/features/auth/LoginScreen';
 
 export default function Home() {
   return (
-    <main>
-      <Container />
+    <main className="flex flex-col items-center justify-center">
+      <LoginScreen />
     </main>
   );
 }

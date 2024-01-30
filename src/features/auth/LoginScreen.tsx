@@ -5,7 +5,7 @@ import { signIn } from 'next-auth/react';
 
 export default function LoginScreen() {
   return (
-    <div className="mx-12 mt-36 flex items-center justify-center">
+    <div className="mx-12 flex items-center justify-center">
       <div className="max-w-xl space-y-6">
         <p>
           Welcome to the weather forecast web application. Please login with
