@@ -14,7 +14,7 @@ export async function getWeatherByCity(
       message,
     };
   }
-  const json = res.json();
+  const json = await res.json();
 
   return {
     ...json,

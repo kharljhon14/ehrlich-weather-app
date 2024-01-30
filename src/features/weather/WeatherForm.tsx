@@ -4,10 +4,13 @@ import { Button, Input } from '@nextui-org/react';
 import { type FormEvent, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
+import { useWeatherContext } from '@/context/weatherContex';
 import { getWeatherByCity } from '@/helpers/api';
+import type { Weather } from '@/types/weather';
 
 export default function WeatherForm() {
   const [searchValue, setSearchValue] = useState('');
+  const { setWeather } = useWeatherContext();
 
   const onSubmit = async (event: FormEvent) => {
     event.preventDefault();
@@ -15,6 +18,7 @@ export default function WeatherForm() {
 
     if (res.status === 200) {
       setSearchValue('');
+      setWeather(res as Weather);
     }
   };
 

@@ -1,11 +1,13 @@
-import WeatherForm from './WeatherForm';
+import { useWeatherContext } from '@/context/weatherContex';
+
+import WeatherFormContainer from './WeatherFormContainer';
 import WeatherInformationTable from './WeatherInformationTable';
 
 export default function WeatherContainer() {
+  const { weather } = useWeatherContext();
   return (
-    <div className="flex w-full items-center justify-center px-14">
-      <WeatherForm />
-      <WeatherInformationTable />
-    </div>
+    <main className="flex w-full items-center justify-center px-6 md:px-14">
+      {weather ? <WeatherInformationTable /> : <WeatherFormContainer />}
+    </main>
   );
 }

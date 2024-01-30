@@ -1,11 +1,12 @@
-import UserInfo from '@/features/auth/UserInfo';
+'use client';
+
+import { WeatherContextProvider } from '@/context/weatherContex';
 import WeatherContainer from '@/features/weather/WeatherContainer';
 
 export default function WeatherPage() {
   return (
-    <main className="flex flex-col items-center justify-center space-y-6">
-      <UserInfo />
+    <WeatherContextProvider>
       <WeatherContainer />
-    </main>
+    </WeatherContextProvider>
   );
 }
