@@ -1,10 +1,9 @@
-import { Button } from '@nextui-org/react';
+import LoginScreen from '@/features/auth/LoginScreen';
 
 export default function Home() {
   return (
     <main>
-      <h1>Home</h1>
-      <Button color="primary">Hello</Button>
+      <LoginScreen />
     </main>
   );
 }
