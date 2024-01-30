@@ -24,7 +24,7 @@ export default function WeatherInformationTable() {
             isStriped
           >
             <TableHeader>
-              <TableColumn className="text-lg">Date</TableColumn>
+              <TableColumn className="text-lg">{weather.name}</TableColumn>
               <TableColumn> </TableColumn>
               <TableColumn className="hidden md:table-cell"> </TableColumn>
               <TableColumn className="hidden md:table-cell"> </TableColumn>
@@ -33,7 +33,7 @@ export default function WeatherInformationTable() {
             </TableHeader>
             <TableBody>
               <TableRow key="1">
-                <TableCell className="font-semibold">Date(mm/dd/yyy)</TableCell>
+                <TableCell className="font-semibold">(mm/dd/yyyy)</TableCell>
                 <TableCell className="font-semibold">Temp(F)</TableCell>
                 <TableCell className="hidden font-semibold md:table-cell">
                   Description

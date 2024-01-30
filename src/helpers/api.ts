@@ -10,7 +10,7 @@ export async function getWeatherByCity(
   if (!res.ok) {
     const { cod, message } = await res.json();
     return {
-      status: parseInt(cod, 10),
+      cod,
       message,
     };
   }

@@ -21,7 +21,7 @@ export default function WeatherForm() {
 
     const res = await getWeatherByCity(searchValue);
 
-    switch (res.status) {
+    switch (res.cod) {
       case 200:
         setSearchValue('');
         setWeather(res as Weather);

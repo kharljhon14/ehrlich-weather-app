@@ -1,5 +1,4 @@
 export interface Weather {
-  status: number;
   coord: {
     lon: number;
     lat: number;
@@ -42,6 +41,6 @@ export interface Weather {
 }
 
 export interface WeatherError {
-  status: number;
+  cod: number;
   message: string;
 }
