@@ -10,7 +10,7 @@ import {
   TableRow,
 } from '@nextui-org/react';
 
-import { useWeatherContext } from '@/context/weatherContex';
+import { useWeatherContext } from '@/context/weatherContext';
 
 export default function WeatherInformationTable() {
   const { weather, resetWeather } = useWeatherContext();

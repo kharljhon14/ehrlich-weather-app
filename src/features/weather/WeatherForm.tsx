@@ -4,7 +4,7 @@ import { Button, Input } from '@nextui-org/react';
 import { type FormEvent, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
-import { useWeatherContext } from '@/context/weatherContex';
+import { useWeatherContext } from '@/context/weatherContext';
 import { getWeatherByCity } from '@/helpers/api';
 import type { Weather, WeatherError } from '@/types/weather';
 

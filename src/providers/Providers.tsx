@@ -10,10 +10,8 @@ export default function Providers({ children }: PropsWithChildren) {
   return (
     <SessionProvider>
       <NextUIProvider>
-        <div className="h-screen ">
-          <Header />
-          <div className="mt-36">{children}</div>
-        </div>
+        <Header />
+        <div className="mt-36">{children}</div>
       </NextUIProvider>
     </SessionProvider>
   );

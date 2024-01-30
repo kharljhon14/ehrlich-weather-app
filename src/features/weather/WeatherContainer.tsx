@@ -1,4 +1,4 @@
-import { useWeatherContext } from '@/context/weatherContex';
+import { useWeatherContext } from '@/context/weatherContext';
 
 import WeatherFormContainer from './WeatherFormContainer';
 import WeatherInformationTable from './WeatherInformationTable';
