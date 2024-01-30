@@ -7,7 +7,7 @@ export default function LoginScreen() {
   return (
     <div className="mx-12 flex items-center justify-center">
       <div className="max-w-xl space-y-6">
-        <p>
+        <p className="text-lg">
           Welcome to the weather forecast web application. Please login with
           your Github user to use the application and view the weather in your
           city.
@@ -15,6 +15,7 @@ export default function LoginScreen() {
 
         <Button
           type="submit"
+          size="lg"
           color="primary"
           onClick={() => signIn('github')}
         >
