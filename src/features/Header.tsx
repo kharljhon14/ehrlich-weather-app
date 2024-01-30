@@ -17,9 +17,14 @@ export default function Header() {
       isBordered
     >
       <NavbarBrand>
-        <FaCloud size={48} />
-
-        <p className="ml-2 text-lg font-bold">Weather Forecast</p>
+        <FaCloud size={38} />
+        {session.data?.user ? (
+          <p className="ml-2 hidden text-lg font-bold md:inline">
+            Weather Forecast
+          </p>
+        ) : (
+          <p className="ml-2 text-lg font-bold md:inline">Weather Forecast</p>
+        )}
       </NavbarBrand>
 
       {session.data?.user && (

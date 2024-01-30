@@ -18,10 +18,10 @@ export default function UserInfo() {
 
   return (
     <div className="hidden text-center md:block">
-      <h2 className="mb-4 text-2xl font-semibold">
-        {session.data?.user?.name}
+      <h2 className="mb-4 text-2xl font-extrabold text-purple-600">
+        Welcome, {session.data?.user?.name}!
       </h2>
-      <span>{session.data?.user?.email}</span>
+      <span className="text-gray-500">{session.data?.user?.email}</span>
     </div>
   );
 }
