@@ -8,7 +8,7 @@ export default function UserInfo() {
 
   if (session.status === 'loading')
     return (
-      <div className="flex items-center justify-center">
+      <div className="hidden items-center justify-center md:flex">
         <Spinner
           label="Loading..."
           size="lg"
